@@ -1,0 +1,10 @@
+<div>
+
+  <% @vehicles.each do |v| %>
+
+    <a href="vehicles/<%= v.id %>"><%= v.vehicle_year %> <%= v.make %> <%= v.model %></a>
+
+
+  <% end %>
+
+</div>

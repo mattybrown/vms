@@ -1,0 +1,14 @@
+
+<b><%= @vehicle.vehicle_year %> <%= @vehicle.make %> <%= @vehicle.model %></b>
+    <p>Purchased on <%= @vehicle.purchase_date.strftime('%d %b %Y') %> for $<%= @vehicle.purchase_price %></p>
+    <p>Sold on <%= @vehicle.sale_date.strftime('%d %b %Y') %> for $<%= @vehicle.sale_price %></p>
+    <ul>
+    	<li><b>Costs</b></li>
+    <% @vehicle.costs.each do |c| %>
+      
+        <li><%= c.recipient %> - $<%= c.price %></li>
+      
+    <% end %>
+    </ul>
+
+<b>Margin: $<%= @price %></b>
