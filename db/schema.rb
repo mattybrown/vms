@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141217203341) do
+ActiveRecord::Schema.define(version: 20141218014907) do
 
   create_table "costs", force: true do |t|
     t.string   "recipient"
-    t.integer  "price"
+    t.float    "price"
     t.integer  "vehicle_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 20141217203341) do
     t.string   "colour"
     t.integer  "cc_rating"
     t.datetime "wof_details"
-    t.integer  "purchase_price"
-    t.integer  "sale_price"
+    t.float    "purchase_price"
+    t.float    "sale_price"
     t.datetime "sale_date"
     t.datetime "purchase_date"
     t.datetime "created_at"

@@ -2,7 +2,7 @@
 
   <% @vehicles.each do |v| %>
 
-    <a href="vehicles/<%= v.id %>"><%= v.vehicle_year %> <%= v.make %> <%= v.model %></a>
+    <a href="vehicles/<%= v.id %>"><%= v.vehicle_year %> <%= v.make %> <%= v.model %></a> - Date added: <%= v.created_at.strftime('%d %b %Y') %><br />
 
 
   <% end %>

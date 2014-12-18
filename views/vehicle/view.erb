@@ -6,9 +6,17 @@
     	<li><b>Costs</b></li>
     <% @vehicle.costs.each do |c| %>
       
-        <li><%= c.recipient %> - $<%= c.price %></li>
-      
+        <li><%= c.recipient %> - $<%= c.price %>  
+        	<form action="/costs/destroy/<%= c.id %>">
+        		<button type="submit">destroy</button>
+        		<input type="hidden" name="cost[vehicle_id]" value="<%= @vehicle.id %>">
+        	</form>
+    	</li>
+       
     <% end %>
     </ul>
+    <p>
+    	<form action="/costs/new/<%= @vehicle.id %>" method="GET"><button type="submit">Add a cost</button></form>
+    </p>
 
 <b>Margin: $<%= @price %></b>

@@ -1,0 +1,10 @@
+<form action="/costs" class="form-inline" method="POST">
+	<ul>
+		<li>Payment recipient: <input type="text" name="cost[recipient]" /></li>
+		<li>Price: <input type="text" name="cost[price]" /></li>
+		<input type="hidden" name="cost[vehicle_id]" value="<%= @car_id %>" />
+		
+
+		<li><input type="submit" value="Add Cost" /></li>
+	</ul>
+</form>
